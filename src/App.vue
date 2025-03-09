@@ -1,26 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="back">
+    <v-app class="fill-height" style="background: transparent">
+      <NavigationList />
+      <router-view class="mt-14" />
+    </v-app>
+  </div>
 </template>
 
+
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import NavigationList from "./components/NavigationList.vue";
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    NavigationList
+  },
+  name: "App"
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.back {
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #2196F3, #2196F3);
+  
 }
 </style>
